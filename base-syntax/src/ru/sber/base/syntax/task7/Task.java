@@ -15,8 +15,8 @@ public class Task {
         if(disc < 0){
             System.out.println("Корней нет");
         }else if(disc > 0){
-            double x1 = (-b + disc)/(2*a);
-            double x2 = (-b - disc)/(2*a);
+            double x1 = (-b + Math.sqrt(disc))/(2*a);
+            double x2 = (-b - Math.sqrt(disc))/(2*a);
             System.out.println("Корни: х1 = " + x1 + " x2 = " + x2);
         }else{
             double x = -b/(2*a);

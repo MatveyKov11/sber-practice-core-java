@@ -2,25 +2,26 @@ package ru.sber.base.syntax.task6;
 
 public class Task {
     public static void main(String[] args) {
-        int[] arr = new int[100];
-        for(int i = 0; i < 100; ++i){
-            arr[i] = (int) Math.round(Math.random()*1000);
+        int arrSize = 100;
+        int[] arr = new int[arrSize];
+        for(int i = 0; i < arrSize; ++i){
+            arr[i] = (int) Math.round(Math.random()*1001);
         }
         int X = -1;
         int Z = -1;
         float sum = 0;
-        for(int i = 0; i < 100; ++i){
+        for(int i = 0; i < arrSize; ++i){
             sum += arr[i];
             if(arr[i] > X){
                 X = arr[i];
                 Z = i;
             }
         }
-        for(int i = 0; i < 100; ++i){
+        for(int i = 0; i < arrSize; ++i){
             System.out.print(arr[i] + " ");
         }
         System.out.println();
         System.out.println("Максимальное значение = " + X + " находится в элементе под индексом " + Z);
-        System.out.println("Среднее значение = " + sum/100);
+        System.out.println("Среднее значение = " + sum/arrSize);
     }
 }

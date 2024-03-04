@@ -7,7 +7,7 @@ public class Task {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         boolean isPrime = true;
-        if(n == 1){
+        if(n <= 1){
             isPrime = false;
         }else{
             for(int i = 2; i*i <= n; ++i){

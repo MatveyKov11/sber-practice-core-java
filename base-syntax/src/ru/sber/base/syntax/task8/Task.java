@@ -2,14 +2,15 @@ package ru.sber.base.syntax.task8;
 
 public class Task {
     public static void main(String[] args) {
-        int[] arr = new int[30];
-        for(int i = 0; i < 30; ++i){
-            arr[i] = (int) Math.round(Math.random()*1000);
+        int arrSize = 30;
+        int[] arr = new int[arrSize];
+        for(int i = 0; i < arrSize; ++i){
+            arr[i] = (int) Math.round(Math.random()*1001);
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        for(int i = 0; i < 28; ++i){
-            for(int j = 0; j < 29-i; ++j){
+        for(int i = 0; i < arrSize-2; ++i){
+            for(int j = 0; j < arrSize-1-i; ++j){
                 if(arr[j] > arr[j+1]){
                     int d = arr[j];
                     arr[j] = arr[j+1];
@@ -17,7 +18,7 @@ public class Task {
                 }
             }
         }
-        for(int i = 0; i < 30; ++i){
+        for(int i = 0; i < arrSize; ++i){
             System.out.print(arr[i] + " ");
         }
     }
